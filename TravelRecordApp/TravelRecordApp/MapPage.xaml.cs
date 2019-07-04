@@ -42,6 +42,7 @@ namespace TravelRecordApp
 
         private void DisplayOnMap(List<Post> posts)
         {
+            locationMap.Pins.Clear();
             foreach (Post post in posts)
             {
                 try
@@ -66,8 +67,7 @@ namespace TravelRecordApp
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            CrossGeolocator.Current.PositionChanged -= OnLocatorPositionChanged;
-            CrossGeolocator.Current.StopListeningAsync();
+            DeregisterLocator();
         }
 
         private async void RegisterLocator()
@@ -78,6 +78,12 @@ namespace TravelRecordApp
                 await CrossGeolocator.Current.StartListeningAsync(TimeSpan.Zero, 100);
             }
         }
+        private async void DeregisterLocator()
+        {
+            CrossGeolocator.Current.PositionChanged -= OnLocatorPositionChanged;
+            await CrossGeolocator.Current.StopListeningAsync();
+        }
+
 
         private void OnLocatorPositionChanged(object sender, PositionEventArgs e)
         {

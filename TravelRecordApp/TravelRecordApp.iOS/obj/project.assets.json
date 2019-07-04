@@ -1926,11 +1926,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Xamarin\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp.iOS\\TravelRecordApp.iOS.csproj",
+      "projectUniqueName": "D:\\Data\\projects\\xamarin\\xamarin-course\\TravelRecordApp\\TravelRecordApp.iOS\\TravelRecordApp.iOS.csproj",
       "projectName": "TravelRecordApp.iOS",
-      "projectPath": "D:\\Xamarin\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp.iOS\\TravelRecordApp.iOS.csproj",
+      "projectPath": "D:\\Data\\projects\\xamarin\\xamarin-course\\TravelRecordApp\\TravelRecordApp.iOS\\TravelRecordApp.iOS.csproj",
       "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-      "outputPath": "D:\\Xamarin\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp.iOS\\obj\\",
+      "outputPath": "D:\\Data\\projects\\xamarin\\xamarin-course\\TravelRecordApp\\TravelRecordApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1951,8 +1951,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Xamarin\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp.csproj": {
-              "projectPath": "D:\\Xamarin\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp.csproj"
+            "D:\\Data\\projects\\xamarin\\xamarin-course\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp.csproj": {
+              "projectPath": "D:\\Data\\projects\\xamarin\\xamarin-course\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp.csproj"
             }
           }
         }

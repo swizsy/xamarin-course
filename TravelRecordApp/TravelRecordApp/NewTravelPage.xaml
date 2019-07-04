@@ -9,6 +9,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="saveTbi"
                      Text="Save"
+                     IconImageSource="save.png"
                      Clicked="SaveTbi_Clicked"/>
     </ContentPage.ToolbarItems>
 

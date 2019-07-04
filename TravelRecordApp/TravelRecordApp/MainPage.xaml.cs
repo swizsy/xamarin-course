@@ -10,6 +10,7 @@ namespace TravelRecordApp
         public MainPage()
         {
             InitializeComponent();
+            LoadResources();
         }
 
         private void LoginButton_Clicked(object sender, EventArgs e)
@@ -22,6 +23,12 @@ namespace TravelRecordApp
             {
 
             }
+        }
+
+        private void LoadResources()
+        {
+            Type assembly = typeof(MainPage);
+            iconImage.Source = ImageSource.FromResource("TravelRecordApp.Assets.Images.plane.png", assembly);
         }
 
         private bool VerifyEmailAddress(string emailAddress)
