@@ -22,11 +22,25 @@ namespace TravelRecordApp
         {
             base.OnAppearing();
 
-            List<Post> posts;
+            DisplayData();
+        }
+
+        private async void DisplayData()
+        {
+            List<Post> posts = await GetPostsDataAsync();
             List<string> categories;
             Dictionary<string, int> categoriesCount = new Dictionary<string, int>();
 
-            using (SQLiteConnection conn = new SQLiteConnection(App.DatabasePath))
+            categories = posts.OrderBy(p => p.CategoryId).Select(p => p.CategoryName).Distinct().ToList();
+
+            foreach (string category in categories)
+            {
+                int count = posts.Where(p => p.CategoryName == category).ToList().Count();
+                categoriesCount.Add(category, count);
+            }
+
+            #region SQLite Local Database Code
+            /*using (SQLiteConnection conn = new SQLiteConnection(App.DatabasePath))
             {
                 posts = conn.Table<Post>().ToList();
 
@@ -46,10 +60,16 @@ namespace TravelRecordApp
 
                     categoriesCount.Add(category, count);
                 }
-            }
+            }*/
+            #endregion
 
             postCountLabel.Text = posts.Count().ToString();
             categoriesListView.ItemsSource = categoriesCount;
+        }
+
+        private async Task<List<Post>> GetPostsDataAsync()
+        {
+            return await App.MobileService.GetTable<Post>().Where(p => p.UserId == App.user.Id).ToListAsync();
         }
     }
 }

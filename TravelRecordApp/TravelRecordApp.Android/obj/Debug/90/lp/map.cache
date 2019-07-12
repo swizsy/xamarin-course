@@ -1,5 +1,11 @@
 FormsViewGroup
+Microsoft.Azure.Mobile.Client
 Newtonsoft.Json
+PCLCrypto
+PInvoke.BCrypt
+PInvoke.Kernel32
+PInvoke.NCrypt
+PInvoke.Windows.Core
 Plugin.CurrentActivity
 Plugin.Geolocator
 Plugin.Permissions
@@ -13,6 +19,7 @@ System.Net.Http.Extensions
 System.Net.Http.Primitives
 System.Runtime
 TravelRecordApp
+Validation
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
@@ -65,3 +72,5 @@ Xamarin.GooglePlayServices.Maps
 Xamarin.GooglePlayServices.Tasks
 netstandard
 System.Reflection.Extensions
+System.Resources.ResourceManager
+System.Diagnostics.Tools

@@ -2,9 +2,9 @@
 using Plugin.Geolocator.Abstractions;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
-using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TravelRecordApp.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -30,18 +30,27 @@ namespace TravelRecordApp
             RegisterLocator();
             GetLocation();
 
-            List<Post> posts;
-            using (SQLiteConnection connection = new SQLiteConnection(App.DatabasePath))
-            {
-                connection.CreateTable<Post>();
-                posts = connection.Table<Post>().ToList();
-            }
+            #region SQLite Local Database Code
+            //List<Post> posts;
+            //using (SQLiteConnection connection = new SQLiteConnection(App.DatabasePath))
+            //{
+            //    connection.CreateTable<Post>();
+            //    posts = connection.Table<Post>().ToList();
+            //} 
+            #endregion
 
-            DisplayOnMap(posts);
+            DisplayOnMapAsync();
         }
 
-        private void DisplayOnMap(List<Post> posts)
+        private async Task<List<Post>> GetPostsAsync()
         {
+            return await App.MobileService.GetTable<Post>().Where(p => p.UserId == App.user.Id).ToListAsync();
+        }
+
+        private async void DisplayOnMapAsync()
+        {
+            List<Post> posts = await GetPostsAsync();
+
             locationMap.Pins.Clear();
             foreach (Post post in posts)
             {
@@ -58,7 +67,7 @@ namespace TravelRecordApp
 
                     locationMap.Pins.Add(pin);
                 }
-                catch (NullReferenceException nullRefEx)
+                catch (Exception)
                 {
                 }
             }

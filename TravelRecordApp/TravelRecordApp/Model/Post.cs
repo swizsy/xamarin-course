@@ -7,10 +7,15 @@ namespace TravelRecordApp.Model
 {
     public class Post
     {
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
+        // Commented code was required for the local SQLite database
+        //[PrimaryKey, AutoIncrement]
+        //public int Id { get; set; }
 
-        [MaxLength(250)]
+        public string Id;
+
+        public string UserId;
+
+        //[MaxLength(250)]
         public string Experience { get; set; }
 
         #region Venue Properties

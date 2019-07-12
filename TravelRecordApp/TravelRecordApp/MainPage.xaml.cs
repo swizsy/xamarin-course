@@ -1,5 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
+using System.Threading.Tasks;
+using TravelRecordApp.Model;
 using Xamarin.Forms;
 
 namespace TravelRecordApp
@@ -15,14 +18,7 @@ namespace TravelRecordApp
 
         private void LoginButton_Clicked(object sender, EventArgs e)
         {
-            if (VerifyEmailAddress(emailEntry.Text) && VerifyPassword(passwordEntry.Text))
-            {
-                Navigation.PushAsync(new HomePage());
-            }
-            else
-            {
-
-            }
+            AttemptUserLoginAsync();
         }
 
         private void LoadResources()
@@ -31,14 +27,26 @@ namespace TravelRecordApp
             iconImage.Source = ImageSource.FromResource("TravelRecordApp.Assets.Images.plane.png", assembly);
         }
 
-        private bool VerifyEmailAddress(string emailAddress)
+        private async void AttemptUserLoginAsync()
         {
-            return !string.IsNullOrEmpty(emailAddress);
+            User user = (await App.MobileService.GetTable<User>().Where(u => u.Email == emailEntry.Text).ToListAsync()).FirstOrDefault();
+
+            if (user != null)
+            {
+                if (user.Password == passwordEntry.Text)
+                {
+                    App.user = user;
+                    await Navigation.PushAsync(new HomePage());
+                    return;
+                }
+            }
+
+            await DisplayAlert("Error", "Incorrect email or password!", "OK");
         }
 
-        private bool VerifyPassword(string password)
+        private void RegisterButton_Clicked(object sender, EventArgs e)
         {
-            return !string.IsNullOrEmpty(password);
+            Navigation.PushAsync(new RegisterPage());
         }
     }
 }

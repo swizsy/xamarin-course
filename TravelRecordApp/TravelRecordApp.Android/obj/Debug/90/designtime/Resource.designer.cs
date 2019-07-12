@@ -26,6 +26,16 @@ namespace TravelRecordApp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.Auth._MobileServices.Resource.Animation.slide_in_right = global::TravelRecordApp.Droid.Resource.Animation.slide_in_right;
+			global::Xamarin.Auth._MobileServices.Resource.Animation.slide_out_left = global::TravelRecordApp.Droid.Resource.Animation.slide_out_left;
+			global::Xamarin.Auth._MobileServices.Resource.Drawable.ic_arrow_back = global::TravelRecordApp.Droid.Resource.Drawable.ic_arrow_back;
+			global::Xamarin.Auth._MobileServices.Resource.Id.webview = global::TravelRecordApp.Droid.Resource.Id.webview;
+			global::Xamarin.Auth._MobileServices.Resource.Layout.activity_webview = global::TravelRecordApp.Droid.Resource.Layout.activity_webview;
+			global::Xamarin.Auth._MobileServices.Resource.String.ApplicationName = global::TravelRecordApp.Droid.Resource.String.ApplicationName;
+			global::Xamarin.Auth._MobileServices.Resource.String.Hello = global::TravelRecordApp.Droid.Resource.String.Hello;
+			global::Xamarin.Auth._MobileServices.Resource.String.title_activity_webview = global::TravelRecordApp.Droid.Resource.String.title_activity_webview;
+			global::PCLCrypto.Resource.String.ApplicationName = global::TravelRecordApp.Droid.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::TravelRecordApp.Droid.Resource.String.Hello;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::TravelRecordApp.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::TravelRecordApp.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::TravelRecordApp.Droid.Resource.Attribute.font;
@@ -2774,17 +2784,23 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F010010
 			public const int design_snackbar_out = 2130771984;
 			
-			// aapt resource value: 0x7F090018
-			public const int EnterFromLeft = 2131296280;
+			// aapt resource value: 0x7F070020
+			public const int EnterFromLeft = 2131165216;
 			
-			// aapt resource value: 0x7F090019
-			public const int EnterFromRight = 2131296281;
+			// aapt resource value: 0x7F070021
+			public const int EnterFromRight = 2131165217;
 			
-			// aapt resource value: 0x7F090020
-			public const int ExitToLeft = 2131296288;
+			// aapt resource value: 0x7F070022
+			public const int ExitToLeft = 2131165218;
 			
-			// aapt resource value: 0x7F090021
-			public const int ExitToRight = 2131296289;
+			// aapt resource value: 0x7F070023
+			public const int ExitToRight = 2131165219;
+			
+			// aapt resource value: 0x7F070002
+			public const int slide_in_right = 2131165186;
+			
+			// aapt resource value: 0x7F070003
+			public const int slide_out_left = 2131165187;
 			
 			static Animation()
 			{
@@ -6483,62 +6499,62 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x1
 			public const int cast_skip_ad_label_border = 1;
 			
-			// aapt resource value: 0x7F010330
-			public const int common_full_open_on_phone = 2130772784;
-			
-			// aapt resource value: 0x7F010316
-			public const int common_google_signin_btn_icon_dark = 2130772758;
+			// aapt resource value: 0x7F010331
+			public const int common_full_open_on_phone = 2130772785;
 			
 			// aapt resource value: 0x7F010317
-			public const int common_google_signin_btn_icon_dark_focused = 2130772759;
+			public const int common_google_signin_btn_icon_dark = 2130772759;
 			
 			// aapt resource value: 0x7F010318
-			public const int common_google_signin_btn_icon_dark_normal = 2130772760;
-			
-			// aapt resource value: 0x7F010331
-			public const int common_google_signin_btn_icon_dark_normal_background = 2130772785;
+			public const int common_google_signin_btn_icon_dark_focused = 2130772760;
 			
 			// aapt resource value: 0x7F010319
-			public const int common_google_signin_btn_icon_disabled = 2130772761;
-			
-			// aapt resource value: 0x7F010320
-			public const int common_google_signin_btn_icon_light = 2130772768;
-			
-			// aapt resource value: 0x7F010321
-			public const int common_google_signin_btn_icon_light_focused = 2130772769;
-			
-			// aapt resource value: 0x7F010322
-			public const int common_google_signin_btn_icon_light_normal = 2130772770;
+			public const int common_google_signin_btn_icon_dark_normal = 2130772761;
 			
 			// aapt resource value: 0x7F010332
-			public const int common_google_signin_btn_icon_light_normal_background = 2130772786;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2130772786;
+			
+			// aapt resource value: 0x7F010320
+			public const int common_google_signin_btn_icon_disabled = 2130772768;
+			
+			// aapt resource value: 0x7F010321
+			public const int common_google_signin_btn_icon_light = 2130772769;
+			
+			// aapt resource value: 0x7F010322
+			public const int common_google_signin_btn_icon_light_focused = 2130772770;
 			
 			// aapt resource value: 0x7F010323
-			public const int common_google_signin_btn_text_dark = 2130772771;
-			
-			// aapt resource value: 0x7F010324
-			public const int common_google_signin_btn_text_dark_focused = 2130772772;
-			
-			// aapt resource value: 0x7F010325
-			public const int common_google_signin_btn_text_dark_normal = 2130772773;
+			public const int common_google_signin_btn_icon_light_normal = 2130772771;
 			
 			// aapt resource value: 0x7F010333
-			public const int common_google_signin_btn_text_dark_normal_background = 2130772787;
+			public const int common_google_signin_btn_icon_light_normal_background = 2130772787;
+			
+			// aapt resource value: 0x7F010324
+			public const int common_google_signin_btn_text_dark = 2130772772;
+			
+			// aapt resource value: 0x7F010325
+			public const int common_google_signin_btn_text_dark_focused = 2130772773;
 			
 			// aapt resource value: 0x7F010326
-			public const int common_google_signin_btn_text_disabled = 2130772774;
-			
-			// aapt resource value: 0x7F010327
-			public const int common_google_signin_btn_text_light = 2130772775;
-			
-			// aapt resource value: 0x7F010328
-			public const int common_google_signin_btn_text_light_focused = 2130772776;
-			
-			// aapt resource value: 0x7F010329
-			public const int common_google_signin_btn_text_light_normal = 2130772777;
+			public const int common_google_signin_btn_text_dark_normal = 2130772774;
 			
 			// aapt resource value: 0x7F010334
-			public const int common_google_signin_btn_text_light_normal_background = 2130772788;
+			public const int common_google_signin_btn_text_dark_normal_background = 2130772788;
+			
+			// aapt resource value: 0x7F010327
+			public const int common_google_signin_btn_text_disabled = 2130772775;
+			
+			// aapt resource value: 0x7F010328
+			public const int common_google_signin_btn_text_light = 2130772776;
+			
+			// aapt resource value: 0x7F010329
+			public const int common_google_signin_btn_text_light_focused = 2130772777;
+			
+			// aapt resource value: 0x7F010330
+			public const int common_google_signin_btn_text_light_normal = 2130772784;
+			
+			// aapt resource value: 0x7F010335
+			public const int common_google_signin_btn_text_light_normal_background = 2130772789;
 			
 			// aapt resource value: 0x7F090057
 			public const int design_bottom_navigation_item_background = 2131296343;
@@ -6558,14 +6574,17 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F09005C
 			public const int design_snackbar_background = 2131296348;
 			
-			// aapt resource value: 0x7F010335
-			public const int googleg_disabled_color_18 = 2130772789;
-			
 			// aapt resource value: 0x7F010336
-			public const int googleg_standard_color_18 = 2130772790;
+			public const int googleg_disabled_color_18 = 2130772790;
+			
+			// aapt resource value: 0x7F010337
+			public const int googleg_standard_color_18 = 2130772791;
 			
 			// aapt resource value: 0x7F010002
 			public const int home = 2130771970;
+			
+			// aapt resource value: 0x7F010007
+			public const int ic_arrow_back = 2130771975;
 			
 			// aapt resource value: 0x7F090055
 			public const int ic_audiotrack_dark = 2131296341;
@@ -7453,11 +7472,11 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0C0014
 			public const int add = 2131492884;
 			
-			// aapt resource value: 0x7F020226
-			public const int adjust_height = 2130838054;
+			// aapt resource value: 0x7F020227
+			public const int adjust_height = 2130838055;
 			
-			// aapt resource value: 0x7F020225
-			public const int adjust_width = 2130838053;
+			// aapt resource value: 0x7F020226
+			public const int adjust_width = 2130838054;
 			
 			// aapt resource value: 0x1
 			public const int ad_container = 1;
@@ -7486,11 +7505,11 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x1
 			public const int android_pay_light_with_border = 1;
 			
-			// aapt resource value: 0x7F020232
-			public const int APP_NAME = 2130838066;
+			// aapt resource value: 0x7F020233
+			public const int APP_NAME = 2130838067;
 			
-			// aapt resource value: 0x7F020224
-			public const int app_name = 2130838052;
+			// aapt resource value: 0x7F020225
+			public const int app_name = 2130838053;
 			
 			// aapt resource value: 0x7F0C0006
 			public const int async = 2131492870;
@@ -7519,11 +7538,11 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0C0008
 			public const int bottom = 2131492872;
 			
-			// aapt resource value: 0x7F020213
-			public const int bottomtab.navarea = 2130838035;
-			
 			// aapt resource value: 0x7F020214
-			public const int bottomtab.tabbar = 2130838036;
+			public const int bottomtab.navarea = 2130838036;
+			
+			// aapt resource value: 0x7F020215
+			public const int bottomtab.tabbar = 2130838037;
 			
 			// aapt resource value: 0x7F0C0009
 			public const int browser_actions_header_text = 2131492873;
@@ -7660,8 +7679,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0C0023
 			public const int customPanel = 2131492899;
 			
-			// aapt resource value: 0x7F020230
-			public const int dark = 2130838064;
+			// aapt resource value: 0x7F020231
+			public const int dark = 2130838065;
 			
 			// aapt resource value: 0x1
 			public const int date = 1;
@@ -7732,11 +7751,11 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0C0031
 			public const int @fixed = 2131492913;
 			
-			// aapt resource value: 0x7F020215
-			public const int flyoutcontent_appbar = 2130838037;
-			
 			// aapt resource value: 0x7F020216
-			public const int flyoutcontent_recycler = 2130838038;
+			public const int flyoutcontent_appbar = 2130838038;
+			
+			// aapt resource value: 0x7F020217
+			public const int flyoutcontent_recycler = 2130838039;
 			
 			// aapt resource value: 0x7F0C0009
 			public const int forever = 2131492873;
@@ -7780,8 +7799,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0C000B
 			public const int icon_group = 2131492875;
 			
-			// aapt resource value: 0x7F020229
-			public const int icon_only = 2130838057;
+			// aapt resource value: 0x7F020230
+			public const int icon_only = 2130838064;
 			
 			// aapt resource value: 0x1
 			public const int icon_uri = 1;
@@ -7846,8 +7865,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x1
 			public const int license_list = 1;
 			
-			// aapt resource value: 0x7F020231
-			public const int light = 2130838065;
+			// aapt resource value: 0x7F020232
+			public const int light = 2130838066;
 			
 			// aapt resource value: 0x7F0C000E
 			public const int line1 = 2131492878;
@@ -7873,17 +7892,17 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x1
 			public const int logo_only = 1;
 			
-			// aapt resource value: 0x7F020217
-			public const int main.appbar = 2130838039;
+			// aapt resource value: 0x7F020218
+			public const int main.appbar = 2130838040;
+			
+			// aapt resource value: 0x7F020221
+			public const int main.scrollview = 2130838049;
 			
 			// aapt resource value: 0x7F020220
-			public const int main.scrollview = 2130838048;
+			public const int main.tablayout = 2130838048;
 			
 			// aapt resource value: 0x7F020219
-			public const int main.tablayout = 2130838041;
-			
-			// aapt resource value: 0x7F020218
-			public const int main.toolbar = 2130838040;
+			public const int main.toolbar = 2130838041;
 			
 			// aapt resource value: 0x7F0C0043
 			public const int masked = 2131492931;
@@ -8224,14 +8243,14 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0C006C
 			public const int select_dialog_listview = 2131492972;
 			
-			// aapt resource value: 0x7F020221
-			public const int shellcontent.appbar = 2130838049;
+			// aapt resource value: 0x7F020222
+			public const int shellcontent.appbar = 2130838050;
+			
+			// aapt resource value: 0x7F020224
+			public const int shellcontent.scrollview = 2130838052;
 			
 			// aapt resource value: 0x7F020223
-			public const int shellcontent.scrollview = 2130838051;
-			
-			// aapt resource value: 0x7F020222
-			public const int shellcontent.toolbar = 2130838050;
+			public const int shellcontent.toolbar = 2130838051;
 			
 			// aapt resource value: 0x7F0C006E
 			public const int shortcut = 2131492974;
@@ -8266,8 +8285,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0C0076
 			public const int src_over = 2131492982;
 			
-			// aapt resource value: 0x7F020227
-			public const int standard = 2130838055;
+			// aapt resource value: 0x7F020228
+			public const int standard = 2130838056;
 			
 			// aapt resource value: 0x7F0C001B
 			public const int start = 2131492891;
@@ -8416,8 +8435,11 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0C009D
 			public const int volume_item_container = 2131493021;
 			
-			// aapt resource value: 0x7F020228
-			public const int wide = 2130838056;
+			// aapt resource value: 0x7F020004
+			public const int webview = 2130837508;
+			
+			// aapt resource value: 0x7F020229
+			public const int wide = 2130838057;
 			
 			// aapt resource value: 0x7F0C0098
 			public const int wrap_content = 2131493016;
@@ -8626,8 +8648,11 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0F001C
 			public const int abc_tooltip = 2131689500;
 			
-			// aapt resource value: 0x7F030083
-			public const int BottomTabLayout = 2130903171;
+			// aapt resource value: 0x7F030004
+			public const int activity_webview = 2130903044;
+			
+			// aapt resource value: 0x7F030084
+			public const int BottomTabLayout = 2130903172;
 			
 			// aapt resource value: 0x7F0F0001
 			public const int browser_actions_context_menu_page = 2131689473;
@@ -8695,8 +8720,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0F002A
 			public const int design_text_input_password_icon = 2131689514;
 			
-			// aapt resource value: 0x7F030084
-			public const int FlyoutContent = 2130903172;
+			// aapt resource value: 0x7F030085
+			public const int FlyoutContent = 2130903173;
 			
 			// aapt resource value: 0x1
 			public const int libraries_social_licenses_license = 1;
@@ -8815,8 +8840,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x1
 			public const int place_autocomplete_progress = 1;
 			
-			// aapt resource value: 0x7F030085
-			public const int RootLayout = 2130903173;
+			// aapt resource value: 0x7F030086
+			public const int RootLayout = 2130903174;
 			
 			// aapt resource value: 0x7F0F0033
 			public const int select_dialog_item_material = 2131689523;
@@ -8827,8 +8852,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F0F0035
 			public const int select_dialog_singlechoice_material = 2131689525;
 			
-			// aapt resource value: 0x7F030086
-			public const int ShellContent = 2130903174;
+			// aapt resource value: 0x7F030087
+			public const int ShellContent = 2130903175;
 			
 			// aapt resource value: 0x7F0F0036
 			public const int support_simple_spinner_dropdown_item = 2131689526;
@@ -9013,6 +9038,9 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F150028
 			public const int appbar_scrolling_view_behavior = 2132082728;
 			
+			// aapt resource value: 0x7F080004
+			public const int ApplicationName = 2131230724;
+			
 			// aapt resource value: 0x7F150029
 			public const int bottom_sheet_behavior = 2132082729;
 			
@@ -9142,56 +9170,56 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x7F15002B
 			public const int character_counter_pattern = 2132082731;
 			
-			// aapt resource value: 0x7F100080
-			public const int common_google_play_services_enable_button = 2131755136;
+			// aapt resource value: 0x7F080083
+			public const int common_google_play_services_enable_button = 2131230851;
 			
-			// aapt resource value: 0x7F100081
-			public const int common_google_play_services_enable_text = 2131755137;
+			// aapt resource value: 0x7F080084
+			public const int common_google_play_services_enable_text = 2131230852;
 			
-			// aapt resource value: 0x7F100082
-			public const int common_google_play_services_enable_title = 2131755138;
+			// aapt resource value: 0x7F080085
+			public const int common_google_play_services_enable_title = 2131230853;
 			
-			// aapt resource value: 0x7F100083
-			public const int common_google_play_services_install_button = 2131755139;
+			// aapt resource value: 0x7F080086
+			public const int common_google_play_services_install_button = 2131230854;
 			
-			// aapt resource value: 0x7F100084
-			public const int common_google_play_services_install_text = 2131755140;
+			// aapt resource value: 0x7F080087
+			public const int common_google_play_services_install_text = 2131230855;
 			
-			// aapt resource value: 0x7F100085
-			public const int common_google_play_services_install_title = 2131755141;
+			// aapt resource value: 0x7F080088
+			public const int common_google_play_services_install_title = 2131230856;
 			
-			// aapt resource value: 0x7F100086
-			public const int common_google_play_services_notification_ticker = 2131755142;
+			// aapt resource value: 0x7F080089
+			public const int common_google_play_services_notification_ticker = 2131230857;
 			
 			// aapt resource value: 0x1
 			public const int common_google_play_services_unknown_issue = 1;
 			
-			// aapt resource value: 0x7F100087
-			public const int common_google_play_services_unsupported_text = 2131755143;
+			// aapt resource value: 0x7F080090
+			public const int common_google_play_services_unsupported_text = 2131230864;
 			
-			// aapt resource value: 0x7F100088
-			public const int common_google_play_services_update_button = 2131755144;
+			// aapt resource value: 0x7F080091
+			public const int common_google_play_services_update_button = 2131230865;
 			
-			// aapt resource value: 0x7F100089
-			public const int common_google_play_services_update_text = 2131755145;
+			// aapt resource value: 0x7F080092
+			public const int common_google_play_services_update_text = 2131230866;
 			
-			// aapt resource value: 0x7F100090
-			public const int common_google_play_services_update_title = 2131755152;
+			// aapt resource value: 0x7F080093
+			public const int common_google_play_services_update_title = 2131230867;
 			
-			// aapt resource value: 0x7F100091
-			public const int common_google_play_services_updating_text = 2131755153;
+			// aapt resource value: 0x7F080094
+			public const int common_google_play_services_updating_text = 2131230868;
 			
-			// aapt resource value: 0x7F100092
-			public const int common_google_play_services_wear_update_text = 2131755154;
+			// aapt resource value: 0x7F080095
+			public const int common_google_play_services_wear_update_text = 2131230869;
 			
-			// aapt resource value: 0x7F100093
-			public const int common_open_on_phone = 2131755155;
+			// aapt resource value: 0x7F080096
+			public const int common_open_on_phone = 2131230870;
 			
-			// aapt resource value: 0x7F100094
-			public const int common_signin_button_text = 2131755156;
+			// aapt resource value: 0x7F080097
+			public const int common_signin_button_text = 2131230871;
 			
-			// aapt resource value: 0x7F100095
-			public const int common_signin_button_text_long = 2131755157;
+			// aapt resource value: 0x7F080098
+			public const int common_signin_button_text_long = 2131230872;
 			
 			// aapt resource value: 0x7F15002C
 			public const int fab_transformation_scrim_behavior = 2132082732;
@@ -9204,6 +9232,9 @@ namespace TravelRecordApp.Droid
 			
 			// aapt resource value: 0x1
 			public const int gcm_fallback_notification_channel_label = 1;
+			
+			// aapt resource value: 0x7F080003
+			public const int Hello = 2131230723;
 			
 			// aapt resource value: 0x7F15002E
 			public const int hide_bottom_view_on_scroll_behavior = 2132082734;
@@ -9348,6 +9379,9 @@ namespace TravelRecordApp.Droid
 			
 			// aapt resource value: 0x1
 			public const int tagmanager_preview_dialog_title = 1;
+			
+			// aapt resource value: 0x7F080002
+			public const int title_activity_webview = 2131230722;
 			
 			// aapt resource value: 0x1
 			public const int wallet_buy_button_place_holder = 1;
@@ -10999,11 +11033,11 @@ namespace TravelRecordApp.Droid
 			public static int[] ActionBarLayout = new int[] {
 					16842931};
 			
-			// aapt resource value: 0x7F070082
-			public const int ActionBarLayout_android_layout_gravity = 2131165314;
+			// aapt resource value: 0x7F090082
+			public const int ActionBarLayout_android_layout_gravity = 2131296386;
 			
-			// aapt resource value: 0x7F070052
-			public const int ActionBar_background = 2131165266;
+			// aapt resource value: 0x7F090052
+			public const int ActionBar_background = 2131296338;
 			
 			// aapt resource value: 0x1
 			public const int ActionBar_backgroundSplit = 1;
@@ -11092,8 +11126,8 @@ namespace TravelRecordApp.Droid
 			public static int[] ActionMenuItemView = new int[] {
 					16843071};
 			
-			// aapt resource value: 0x7F070084
-			public const int ActionMenuItemView_android_minWidth = 2131165316;
+			// aapt resource value: 0x7F090084
+			public const int ActionMenuItemView_android_minWidth = 2131296388;
 			
 			public static int[] ActionMenuView = new int[] {
 					0};
@@ -11106,8 +11140,8 @@ namespace TravelRecordApp.Droid
 					2130968951,
 					2130969030};
 			
-			// aapt resource value: 0x7F070086
-			public const int ActionMode_background = 2131165318;
+			// aapt resource value: 0x7F090086
+			public const int ActionMode_background = 2131296390;
 			
 			// aapt resource value: 0x1
 			public const int ActionMode_backgroundSplit = 1;
@@ -11128,8 +11162,8 @@ namespace TravelRecordApp.Droid
 					2130968763,
 					2130968824};
 			
-			// aapt resource value: 0x7F070093
-			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131165331;
+			// aapt resource value: 0x7F090093
+			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131296403;
 			
 			// aapt resource value: 0x1
 			public const int ActivityChooserView_initialActivityCount = 1;
@@ -11139,8 +11173,8 @@ namespace TravelRecordApp.Droid
 					1,
 					1};
 			
-			// aapt resource value: 0x7F070767
-			public const int AdsAttrs_adSize = 2131167079;
+			// aapt resource value: 0x7F090767
+			public const int AdsAttrs_adSize = 2131298151;
 			
 			// aapt resource value: 0x1
 			public const int AdsAttrs_adSizes = 1;
@@ -11158,8 +11192,8 @@ namespace TravelRecordApp.Droid
 					2130968924,
 					2130968925};
 			
-			// aapt resource value: 0x7F070096
-			public const int AlertDialog_android_layout = 2131165334;
+			// aapt resource value: 0x7F090096
+			public const int AlertDialog_android_layout = 2131296406;
 			
 			// aapt resource value: 0x1
 			public const int AlertDialog_buttonIconDimen = 1;
@@ -11190,8 +11224,8 @@ namespace TravelRecordApp.Droid
 					16843157,
 					16843156};
 			
-			// aapt resource value: 0x7F070730
-			public const int AnimatedStateListDrawableCompat_android_constantSize = 2131167024;
+			// aapt resource value: 0x7F090730
+			public const int AnimatedStateListDrawableCompat_android_constantSize = 2131298096;
 			
 			// aapt resource value: 0x1
 			public const int AnimatedStateListDrawableCompat_android_dither = 1;
@@ -11212,8 +11246,8 @@ namespace TravelRecordApp.Droid
 					16843161,
 					16842960};
 			
-			// aapt resource value: 0x7F070737
-			public const int AnimatedStateListDrawableItem_android_drawable = 2131167031;
+			// aapt resource value: 0x7F090737
+			public const int AnimatedStateListDrawableItem_android_drawable = 2131298103;
 			
 			// aapt resource value: 0x1
 			public const int AnimatedStateListDrawableItem_android_id = 1;
@@ -11224,8 +11258,8 @@ namespace TravelRecordApp.Droid
 					16843851,
 					16843849};
 			
-			// aapt resource value: 0x7F070740
-			public const int AnimatedStateListDrawableTransition_android_drawable = 2131167040;
+			// aapt resource value: 0x7F090740
+			public const int AnimatedStateListDrawableTransition_android_drawable = 2131298112;
 			
 			// aapt resource value: 0x1
 			public const int AnimatedStateListDrawableTransition_android_fromId = 1;
@@ -11250,8 +11284,8 @@ namespace TravelRecordApp.Droid
 					2130968940,
 					2130968941};
 			
-			// aapt resource value: 0x7F070112
-			public const int AppBarLayoutStates_state_collapsed = 2131165458;
+			// aapt resource value: 0x7F090112
+			public const int AppBarLayoutStates_state_collapsed = 2131296530;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayoutStates_state_collapsible = 1;
@@ -11262,8 +11296,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x3
 			public const int AppBarLayoutStates_state_lifted = 3;
 			
-			// aapt resource value: 0x7F070105
-			public const int AppBarLayout_android_background = 2131165445;
+			// aapt resource value: 0x7F090105
+			public const int AppBarLayout_android_background = 2131296517;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_android_keyboardNavigationCluster = 1;
@@ -11281,8 +11315,8 @@ namespace TravelRecordApp.Droid
 					2130968852,
 					2130968853};
 			
-			// aapt resource value: 0x7F070117
-			public const int AppBarLayout_Layout_layout_scrollFlags = 2131165463;
+			// aapt resource value: 0x7F090117
+			public const int AppBarLayout_Layout_layout_scrollFlags = 2131296535;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_Layout_layout_scrollInterpolator = 1;
@@ -11296,8 +11330,8 @@ namespace TravelRecordApp.Droid
 					2130969018,
 					2130969019};
 			
-			// aapt resource value: 0x7F070120
-			public const int AppCompatImageView_android_src = 2131165472;
+			// aapt resource value: 0x7F090120
+			public const int AppCompatImageView_android_src = 2131296544;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatImageView_srcCompat = 1;
@@ -11314,8 +11348,8 @@ namespace TravelRecordApp.Droid
 					2130969016,
 					2130969017};
 			
-			// aapt resource value: 0x7F070125
-			public const int AppCompatSeekBar_android_thumb = 2131165477;
+			// aapt resource value: 0x7F090125
+			public const int AppCompatSeekBar_android_thumb = 2131296549;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatSeekBar_tickMark = 1;
@@ -11335,8 +11369,8 @@ namespace TravelRecordApp.Droid
 					16843117,
 					16842804};
 			
-			// aapt resource value: 0x7F070130
-			public const int AppCompatTextHelper_android_drawableBottom = 2131165488;
+			// aapt resource value: 0x7F090130
+			public const int AppCompatTextHelper_android_drawableBottom = 2131296560;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextHelper_android_drawableEnd = 1;
@@ -11369,8 +11403,8 @@ namespace TravelRecordApp.Droid
 					2130968855,
 					2130968983};
 			
-			// aapt resource value: 0x7F070138
-			public const int AppCompatTextView_android_textAppearance = 2131165496;
+			// aapt resource value: 0x7F090138
+			public const int AppCompatTextView_android_textAppearance = 2131296568;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextView_autoSizeMaxTextSize = 1;
@@ -11525,8 +11559,8 @@ namespace TravelRecordApp.Droid
 					2130969052,
 					2130969053};
 			
-			// aapt resource value: 0x7F070150
-			public const int AppCompatTheme_actionBarDivider = 2131165520;
+			// aapt resource value: 0x7F090150
+			public const int AppCompatTheme_actionBarDivider = 2131296592;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTheme_actionBarItemBackground = 1;
@@ -11899,8 +11933,8 @@ namespace TravelRecordApp.Droid
 					2130968775,
 					2130968806};
 			
-			// aapt resource value: 0x7F070272
-			public const int BottomAppBar_backgroundTint = 2131165810;
+			// aapt resource value: 0x7F090272
+			public const int BottomAppBar_backgroundTint = 2131296882;
 			
 			// aapt resource value: 0x1
 			public const int BottomAppBar_fabAlignmentMode = 1;
@@ -11929,8 +11963,8 @@ namespace TravelRecordApp.Droid
 					2130968840,
 					2130968876};
 			
-			// aapt resource value: 0x7F070279
-			public const int BottomNavigationView_elevation = 2131165817;
+			// aapt resource value: 0x7F090279
+			public const int BottomNavigationView_elevation = 2131296889;
 			
 			// aapt resource value: 0x1
 			public const int BottomNavigationView_itemBackground = 1;
@@ -11965,8 +11999,8 @@ namespace TravelRecordApp.Droid
 					2130968636,
 					2130968637};
 			
-			// aapt resource value: 0x7F070290
-			public const int BottomSheetBehavior_Layout_behavior_fitToContents = 2131165840;
+			// aapt resource value: 0x7F090290
+			public const int BottomSheetBehavior_Layout_behavior_fitToContents = 2131296912;
 			
 			// aapt resource value: 0x1
 			public const int BottomSheetBehavior_Layout_behavior_hideable = 1;
@@ -11980,8 +12014,8 @@ namespace TravelRecordApp.Droid
 			public static int[] ButtonBarLayout = new int[] {
 					2130968615};
 			
-			// aapt resource value: 0x7F070295
-			public const int ButtonBarLayout_allowStacking = 2131165845;
+			// aapt resource value: 0x7F090295
+			public const int ButtonBarLayout_allowStacking = 2131296917;
 			
 			public static int[] CardView = new int[] {
 					16843072,
@@ -11998,8 +12032,8 @@ namespace TravelRecordApp.Droid
 					2130968731,
 					2130968732};
 			
-			// aapt resource value: 0x7F070297
-			public const int CardView_android_minHeight = 2131165847;
+			// aapt resource value: 0x7F090297
+			public const int CardView_android_minHeight = 2131296919;
 			
 			// aapt resource value: 0x1
 			public const int CardView_android_minWidth = 1;
@@ -12076,8 +12110,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x9
 			public const int CastExpandedController_castRewind30ButtonDrawable = 9;
 			
-			// aapt resource value: 0x7F070780
-			public const int CastExpandedController_castSeekBarProgressDrawable = 2131167104;
+			// aapt resource value: 0x7F090780
+			public const int CastExpandedController_castSeekBarProgressDrawable = 2131298176;
 			
 			// aapt resource value: 0x1
 			public const int CastExpandedController_castSeekBarThumbDrawable = 1;
@@ -12099,8 +12133,8 @@ namespace TravelRecordApp.Droid
 					1,
 					1};
 			
-			// aapt resource value: 0x7F070786
-			public const int CastIntroOverlay_castBackgroundColor = 2131167110;
+			// aapt resource value: 0x7F090786
+			public const int CastIntroOverlay_castBackgroundColor = 2131298182;
 			
 			// aapt resource value: 0x1
 			public const int CastIntroOverlay_castButtonBackgroundColor = 1;
@@ -12192,8 +12226,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x2
 			public const int CastMiniController_castSubtitleTextAppearance = 2;
 			
-			// aapt resource value: 0x7F070811
-			public const int CastMiniController_castTitleTextAppearance = 2131167249;
+			// aapt resource value: 0x7F090811
+			public const int CastMiniController_castTitleTextAppearance = 2131298321;
 			
 			public static int[] Chip = new int[] {
 					16843237,
@@ -12239,8 +12273,8 @@ namespace TravelRecordApp.Droid
 					2130968926,
 					2130968927};
 			
-			// aapt resource value: 0x7F070346
-			public const int ChipGroup_checkedChip = 2131166022;
+			// aapt resource value: 0x7F090346
+			public const int ChipGroup_checkedChip = 2131297094;
 			
 			// aapt resource value: 0x1
 			public const int ChipGroup_chipSpacing = 1;
@@ -12257,8 +12291,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x5
 			public const int ChipGroup_singleSelection = 5;
 			
-			// aapt resource value: 0x7F070311
-			public const int Chip_android_checkable = 2131165969;
+			// aapt resource value: 0x7F090311
+			public const int Chip_android_checkable = 2131297041;
 			
 			// aapt resource value: 0x1
 			public const int Chip_android_ellipsize = 1;
@@ -12377,8 +12411,8 @@ namespace TravelRecordApp.Droid
 					2130969021,
 					2130969031};
 			
-			// aapt resource value: 0x7F070353
-			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131166035;
+			// aapt resource value: 0x7F090353
+			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131297107;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_collapsedTitleTextAppearance = 1;
@@ -12411,8 +12445,8 @@ namespace TravelRecordApp.Droid
 					2130968847,
 					2130968848};
 			
-			// aapt resource value: 0x7F070370
-			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131166064;
+			// aapt resource value: 0x7F090370
+			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131297136;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = 1;
@@ -12440,8 +12474,8 @@ namespace TravelRecordApp.Droid
 					16843551,
 					16843173};
 			
-			// aapt resource value: 0x7F070003
-			public const int ColorStateListItem_alpha = 2131165187;
+			// aapt resource value: 0x7F090003
+			public const int ColorStateListItem_alpha = 2131296259;
 			
 			// aapt resource value: 0x1
 			public const int ColorStateListItem_android_alpha = 1;
@@ -12454,8 +12488,8 @@ namespace TravelRecordApp.Droid
 					2130968663,
 					2130968664};
 			
-			// aapt resource value: 0x7F070373
-			public const int CompoundButton_android_button = 2131166067;
+			// aapt resource value: 0x7F090373
+			public const int CompoundButton_android_button = 2131297139;
 			
 			// aapt resource value: 0x1
 			public const int CompoundButton_buttonTint = 1;
@@ -12467,8 +12501,8 @@ namespace TravelRecordApp.Droid
 					2130968589,
 					2130968596};
 			
-			// aapt resource value: 0x7F070041
-			public const int CoordinatorLayout_keylines = 2131165249;
+			// aapt resource value: 0x7F090041
+			public const int CoordinatorLayout_keylines = 2131296321;
 			
 			public static int[] CoordinatorLayout_Layout = new int[] {
 					16842931,
@@ -12479,8 +12513,8 @@ namespace TravelRecordApp.Droid
 					2130968594,
 					2130968595};
 			
-			// aapt resource value: 0x7F070044
-			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131165252;
+			// aapt resource value: 0x7F090044
+			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131296324;
 			
 			// aapt resource value: 0x1
 			public const int CoordinatorLayout_Layout_layout_anchor = 1;
@@ -12516,8 +12550,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x2
 			public const int Corpus_contentProviderUri = 2;
 			
-			// aapt resource value: 0x7F070814
-			public const int Corpus_corpusId = 2131167252;
+			// aapt resource value: 0x7F090814
+			public const int Corpus_corpusId = 2131298324;
 			
 			// aapt resource value: 0x1
 			public const int Corpus_corpusVersion = 1;
@@ -12545,8 +12579,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x2
 			public const int CustomCastTheme_castExpandedControllerStyle = 2;
 			
-			// aapt resource value: 0x7F070823
-			public const int CustomCastTheme_castIntroOverlayStyle = 2131167267;
+			// aapt resource value: 0x7F090823
+			public const int CustomCastTheme_castIntroOverlayStyle = 2131298339;
 			
 			// aapt resource value: 0x1
 			public const int CustomCastTheme_castMiniControllerStyle = 1;
@@ -12558,15 +12592,15 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x1
 			public const int CustomWalletTheme_toolbarTextColorStyle = 1;
 			
-			// aapt resource value: 0x7F070827
-			public const int CustomWalletTheme_windowTransitionStyle = 2131167271;
+			// aapt resource value: 0x7F090827
+			public const int CustomWalletTheme_windowTransitionStyle = 2131298343;
 			
 			public static int[] DesignTheme = new int[] {
 					2130968642,
 					2130968643};
 			
-			// aapt resource value: 0x7F070377
-			public const int DesignTheme_bottomSheetDialogTheme = 2131166071;
+			// aapt resource value: 0x7F090377
+			public const int DesignTheme_bottomSheetDialogTheme = 2131297143;
 			
 			// aapt resource value: 0x1
 			public const int DesignTheme_bottomSheetStyle = 1;
@@ -12581,8 +12615,8 @@ namespace TravelRecordApp.Droid
 					2130968931,
 					2130969011};
 			
-			// aapt resource value: 0x7F070380
-			public const int DrawerArrowToggle_arrowHeadLength = 2131166080;
+			// aapt resource value: 0x7F090380
+			public const int DrawerArrowToggle_arrowHeadLength = 2131297152;
 			
 			// aapt resource value: 0x1
 			public const int DrawerArrowToggle_arrowShaftLength = 1;
@@ -12609,8 +12643,8 @@ namespace TravelRecordApp.Droid
 					1,
 					1};
 			
-			// aapt resource value: 0x7F070829
-			public const int FeatureParam_paramName = 2131167273;
+			// aapt resource value: 0x7F090829
+			public const int FeatureParam_paramName = 2131298345;
 			
 			// aapt resource value: 0x1
 			public const int FeatureParam_paramValue = 1;
@@ -12630,8 +12664,8 @@ namespace TravelRecordApp.Droid
 					2130968922,
 					2130969041};
 			
-			// aapt resource value: 0x7F070389
-			public const int FloatingActionButton_backgroundTint = 2131166089;
+			// aapt resource value: 0x7F090389
+			public const int FloatingActionButton_backgroundTint = 2131297161;
 			
 			// aapt resource value: 0x1
 			public const int FloatingActionButton_backgroundTintMode = 1;
@@ -12639,8 +12673,8 @@ namespace TravelRecordApp.Droid
 			public static int[] FloatingActionButton_Behavior_Layout = new int[] {
 					2130968632};
 			
-			// aapt resource value: 0x7F070403
-			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131166211;
+			// aapt resource value: 0x7F090403
+			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131297283;
 			
 			// aapt resource value: 0x2
 			public const int FloatingActionButton_borderWidth = 2;
@@ -12679,8 +12713,8 @@ namespace TravelRecordApp.Droid
 					2130968834,
 					2130968856};
 			
-			// aapt resource value: 0x7F070405
-			public const int FlowLayout_itemSpacing = 2131166213;
+			// aapt resource value: 0x7F090405
+			public const int FlowLayout_itemSpacing = 2131297285;
 			
 			// aapt resource value: 0x1
 			public const int FlowLayout_lineSpacing = 1;
@@ -12705,8 +12739,8 @@ namespace TravelRecordApp.Droid
 					2130968587,
 					2130968588};
 			
-			// aapt resource value: 0x7F070014
-			public const int FontFamilyFont_android_font = 2131165204;
+			// aapt resource value: 0x7F090014
+			public const int FontFamilyFont_android_font = 2131296276;
 			
 			// aapt resource value: 0x1
 			public const int FontFamilyFont_android_fontStyle = 1;
@@ -12735,8 +12769,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x9
 			public const int FontFamilyFont_ttcIndex = 9;
 			
-			// aapt resource value: 0x7F070007
-			public const int FontFamily_fontProviderAuthority = 2131165191;
+			// aapt resource value: 0x7F090007
+			public const int FontFamily_fontProviderAuthority = 2131296263;
 			
 			// aapt resource value: 0x1
 			public const int FontFamily_fontProviderCerts = 1;
@@ -12758,8 +12792,8 @@ namespace TravelRecordApp.Droid
 					16843264,
 					2130968796};
 			
-			// aapt resource value: 0x7F070408
-			public const int ForegroundLinearLayout_android_foreground = 2131166216;
+			// aapt resource value: 0x7F090408
+			public const int ForegroundLinearLayout_android_foreground = 2131297288;
 			
 			// aapt resource value: 0x1
 			public const int ForegroundLinearLayout_android_foregroundGravity = 1;
@@ -12778,8 +12812,8 @@ namespace TravelRecordApp.Droid
 			public static int[] GlobalSearchCorpus = new int[] {
 					1};
 			
-			// aapt resource value: 0x7F070839
-			public const int GlobalSearchCorpus_allowShortcuts = 2131167289;
+			// aapt resource value: 0x7F090839
+			public const int GlobalSearchCorpus_allowShortcuts = 2131298361;
 			
 			public static int[] GlobalSearchSection = new int[] {
 					1,
@@ -12788,8 +12822,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x1
 			public const int GlobalSearchSection_sectionContent = 1;
 			
-			// aapt resource value: 0x7F070842
-			public const int GlobalSearchSection_sectionType = 2131167298;
+			// aapt resource value: 0x7F090842
+			public const int GlobalSearchSection_sectionType = 2131298370;
 			
 			// aapt resource value: 0x3
 			public const int GlobalSearch_defaultIntentAction = 3;
@@ -12800,8 +12834,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x4
 			public const int GlobalSearch_defaultIntentData = 4;
 			
-			// aapt resource value: 0x7F070835
-			public const int GlobalSearch_searchEnabled = 2131167285;
+			// aapt resource value: 0x7F090835
+			public const int GlobalSearch_searchEnabled = 2131298357;
 			
 			// aapt resource value: 0x1
 			public const int GlobalSearch_searchLabel = 1;
@@ -12827,14 +12861,14 @@ namespace TravelRecordApp.Droid
 					16843173,
 					16844052};
 			
-			// aapt resource value: 0x7F070038
-			public const int GradientColorItem_android_color = 2131165240;
+			// aapt resource value: 0x7F090038
+			public const int GradientColorItem_android_color = 2131296312;
 			
 			// aapt resource value: 0x1
 			public const int GradientColorItem_android_offset = 1;
 			
-			// aapt resource value: 0x7F070025
-			public const int GradientColor_android_centerColor = 2131165221;
+			// aapt resource value: 0x7F090025
+			public const int GradientColor_android_centerColor = 2131296293;
 			
 			// aapt resource value: 0x1
 			public const int GradientColor_android_centerX = 1;
@@ -12877,8 +12911,8 @@ namespace TravelRecordApp.Droid
 					1,
 					1};
 			
-			// aapt resource value: 0x7F070844
-			public const int IMECorpus_inputEnabled = 2131167300;
+			// aapt resource value: 0x7F090844
+			public const int IMECorpus_inputEnabled = 2131298372;
 			
 			// aapt resource value: 0x1
 			public const int IMECorpus_sourceClass = 1;
@@ -12906,8 +12940,8 @@ namespace TravelRecordApp.Droid
 					2130968875,
 					2130968921};
 			
-			// aapt resource value: 0x7F070412
-			public const int LinearLayoutCompat_android_baselineAligned = 2131166226;
+			// aapt resource value: 0x7F090412
+			public const int LinearLayoutCompat_android_baselineAligned = 2131297298;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_android_baselineAlignedChildIndex = 1;
@@ -12933,8 +12967,8 @@ namespace TravelRecordApp.Droid
 					16843137,
 					16842996};
 			
-			// aapt resource value: 0x7F070422
-			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131166242;
+			// aapt resource value: 0x7F090422
+			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131297314;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_Layout_android_layout_height = 1;
@@ -12955,8 +12989,8 @@ namespace TravelRecordApp.Droid
 					16843436,
 					16843437};
 			
-			// aapt resource value: 0x7F070427
-			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131166247;
+			// aapt resource value: 0x7F090427
+			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131297319;
 			
 			// aapt resource value: 0x1
 			public const int ListPopupWindow_android_dropDownVerticalOffset = 1;
@@ -12966,14 +13000,14 @@ namespace TravelRecordApp.Droid
 					0,
 					0};
 			
-			// aapt resource value: 0x7F070760
-			public const int LoadingImageView_circleCrop = 2131167072;
+			// aapt resource value: 0x7F090760
+			public const int LoadingImageView_circleCrop = 2131298144;
 			
-			// aapt resource value: 0x7F070759
-			public const int LoadingImageView_imageAspectRatio = 2131167065;
+			// aapt resource value: 0x7F090759
+			public const int LoadingImageView_imageAspectRatio = 2131298137;
 			
-			// aapt resource value: 0x7F070758
-			public const int LoadingImageView_imageAspectRatioAdjust = 2131167064;
+			// aapt resource value: 0x7F090758
+			public const int LoadingImageView_imageAspectRatioAdjust = 2131298136;
 			
 			public static int[] MapAttrs = new int[] {
 					1,
@@ -13039,8 +13073,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x6
 			public const int MapAttrs_liteMode = 6;
 			
-			// aapt resource value: 0x7F070864
-			public const int MapAttrs_mapType = 2131167332;
+			// aapt resource value: 0x7F090864
+			public const int MapAttrs_mapType = 2131298404;
 			
 			// aapt resource value: 0x7
 			public const int MapAttrs_uiCompass = 7;
@@ -13087,8 +13121,8 @@ namespace TravelRecordApp.Droid
 					2130968944,
 					2130968945};
 			
-			// aapt resource value: 0x7F070430
-			public const int MaterialButton_android_insetBottom = 2131166256;
+			// aapt resource value: 0x7F090430
+			public const int MaterialButton_android_insetBottom = 2131297328;
 			
 			// aapt resource value: 0x1
 			public const int MaterialButton_android_insetLeft = 1;
@@ -13139,8 +13173,8 @@ namespace TravelRecordApp.Droid
 					2130968944,
 					2130968945};
 			
-			// aapt resource value: 0x7F070447
-			public const int MaterialCardView_strokeColor = 2131166279;
+			// aapt resource value: 0x7F090447
+			public const int MaterialCardView_strokeColor = 2131297351;
 			
 			// aapt resource value: 0x1
 			public const int MaterialCardView_strokeWidth = 1;
@@ -13179,8 +13213,8 @@ namespace TravelRecordApp.Droid
 					2130969004,
 					2130969008};
 			
-			// aapt resource value: 0x7F070450
-			public const int MaterialComponentsTheme_bottomSheetDialogTheme = 2131166288;
+			// aapt resource value: 0x7F090450
+			public const int MaterialComponentsTheme_bottomSheetDialogTheme = 2131297360;
 			
 			// aapt resource value: 0x1
 			public const int MaterialComponentsTheme_bottomSheetStyle = 1;
@@ -13281,8 +13315,8 @@ namespace TravelRecordApp.Droid
 					2130968691,
 					2130968752};
 			
-			// aapt resource value: 0x7F070754
-			public const int MediaRouteButton_android_minHeight = 2131167060;
+			// aapt resource value: 0x7F090754
+			public const int MediaRouteButton_android_minHeight = 2131298132;
 			
 			// aapt resource value: 0x1
 			public const int MediaRouteButton_android_minWidth = 1;
@@ -13301,8 +13335,8 @@ namespace TravelRecordApp.Droid
 					16843231,
 					16843156};
 			
-			// aapt resource value: 0x7F070483
-			public const int MenuGroup_android_checkableBehavior = 2131166339;
+			// aapt resource value: 0x7F090483
+			public const int MenuGroup_android_checkableBehavior = 2131297411;
 			
 			// aapt resource value: 0x1
 			public const int MenuGroup_android_enabled = 1;
@@ -13344,8 +13378,8 @@ namespace TravelRecordApp.Droid
 					2130968920,
 					2130969036};
 			
-			// aapt resource value: 0x7F070490
-			public const int MenuItem_actionLayout = 2131166352;
+			// aapt resource value: 0x7F090490
+			public const int MenuItem_actionLayout = 2131297424;
 			
 			// aapt resource value: 0x1
 			public const int MenuItem_actionProviderClass = 1;
@@ -13424,8 +13458,8 @@ namespace TravelRecordApp.Droid
 					2130968899,
 					2130968946};
 			
-			// aapt resource value: 0x7F070514
-			public const int MenuView_android_headerBackground = 2131166484;
+			// aapt resource value: 0x7F090514
+			public const int MenuView_android_headerBackground = 2131297556;
 			
 			// aapt resource value: 0x1
 			public const int MenuView_android_horizontalDivider = 1;
@@ -13465,8 +13499,8 @@ namespace TravelRecordApp.Droid
 					2130968838,
 					2130968876};
 			
-			// aapt resource value: 0x7F070524
-			public const int NavigationView_android_background = 2131166500;
+			// aapt resource value: 0x7F090524
+			public const int NavigationView_android_background = 2131297572;
 			
 			// aapt resource value: 0x1
 			public const int NavigationView_android_fitsSystemWindows = 1;
@@ -13509,11 +13543,11 @@ namespace TravelRecordApp.Droid
 			public static int[] PopupWindowBackgroundState = new int[] {
 					2130968937};
 			
-			// aapt resource value: 0x7F070541
-			public const int PopupWindowBackgroundState_state_above_anchor = 2131166529;
+			// aapt resource value: 0x7F090541
+			public const int PopupWindowBackgroundState_state_above_anchor = 2131297601;
 			
-			// aapt resource value: 0x7F070537
-			public const int PopupWindow_android_popupAnimationStyle = 2131166519;
+			// aapt resource value: 0x7F090537
+			public const int PopupWindow_android_popupAnimationStyle = 2131297591;
 			
 			// aapt resource value: 0x1
 			public const int PopupWindow_android_popupBackground = 1;
@@ -13525,8 +13559,8 @@ namespace TravelRecordApp.Droid
 					2130968884,
 					2130968887};
 			
-			// aapt resource value: 0x7F070543
-			public const int RecycleListView_paddingBottomNoButtons = 2131166531;
+			// aapt resource value: 0x7F090543
+			public const int RecycleListView_paddingBottomNoButtons = 2131297603;
 			
 			// aapt resource value: 0x1
 			public const int RecycleListView_paddingTopNoTitle = 1;
@@ -13544,8 +13578,8 @@ namespace TravelRecordApp.Droid
 					2130968930,
 					2130968936};
 			
-			// aapt resource value: 0x7F070546
-			public const int RecyclerView_android_descendantFocusability = 2131166534;
+			// aapt resource value: 0x7F090546
+			public const int RecyclerView_android_descendantFocusability = 2131297606;
 			
 			// aapt resource value: 0x1
 			public const int RecyclerView_android_orientation = 1;
@@ -13580,14 +13614,14 @@ namespace TravelRecordApp.Droid
 			public static int[] ScrimInsetsFrameLayout = new int[] {
 					2130968825};
 			
-			// aapt resource value: 0x7F070558
-			public const int ScrimInsetsFrameLayout_insetForeground = 2131166552;
+			// aapt resource value: 0x7F090558
+			public const int ScrimInsetsFrameLayout_insetForeground = 2131297624;
 			
 			public static int[] ScrollingViewBehavior_Layout = new int[] {
 					2130968635};
 			
-			// aapt resource value: 0x7F070560
-			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131166560;
+			// aapt resource value: 0x7F090560
+			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131297632;
 			
 			public static int[] SearchView = new int[] {
 					16842970,
@@ -13608,8 +13642,8 @@ namespace TravelRecordApp.Droid
 					2130968952,
 					2130969043};
 			
-			// aapt resource value: 0x7F070562
-			public const int SearchView_android_focusable = 2131166562;
+			// aapt resource value: 0x7F090562
+			public const int SearchView_android_focusable = 2131297634;
 			
 			// aapt resource value: 0x1
 			public const int SearchView_android_imeOptions = 1;
@@ -13671,8 +13705,8 @@ namespace TravelRecordApp.Droid
 			public static int[] SectionFeature = new int[] {
 					1};
 			
-			// aapt resource value: 0x7F070883
-			public const int SectionFeature_featureType = 2131167363;
+			// aapt resource value: 0x7F090883
+			public const int SectionFeature_featureType = 2131298435;
 			
 			// aapt resource value: 0x4
 			public const int Section_indexPrefixes = 4;
@@ -13686,8 +13720,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x1
 			public const int Section_sectionFormat = 1;
 			
-			// aapt resource value: 0x7F070879
-			public const int Section_sectionId = 2131167353;
+			// aapt resource value: 0x7F090879
+			public const int Section_sectionId = 2131298425;
 			
 			// aapt resource value: 0x3
 			public const int Section_sectionWeight = 3;
@@ -13700,14 +13734,14 @@ namespace TravelRecordApp.Droid
 					0,
 					0};
 			
-			// aapt resource value: 0x7F070762
-			public const int SignInButton_buttonSize = 2131167074;
+			// aapt resource value: 0x7F090762
+			public const int SignInButton_buttonSize = 2131298146;
 			
-			// aapt resource value: 0x7F070763
-			public const int SignInButton_colorScheme = 2131167075;
+			// aapt resource value: 0x7F090763
+			public const int SignInButton_colorScheme = 2131298147;
 			
-			// aapt resource value: 0x7F070764
-			public const int SignInButton_scopeUris = 2131167076;
+			// aapt resource value: 0x7F090764
+			public const int SignInButton_scopeUris = 2131298148;
 			
 			public static int[] Snackbar = new int[] {
 					2130968928,
@@ -13718,8 +13752,8 @@ namespace TravelRecordApp.Droid
 					2130968758,
 					2130968872};
 			
-			// aapt resource value: 0x7F070583
-			public const int SnackbarLayout_android_maxWidth = 2131166595;
+			// aapt resource value: 0x7F090583
+			public const int SnackbarLayout_android_maxWidth = 2131297667;
 			
 			// aapt resource value: 0x1
 			public const int SnackbarLayout_elevation = 1;
@@ -13727,8 +13761,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x2
 			public const int SnackbarLayout_maxActionInlineWidth = 2;
 			
-			// aapt resource value: 0x7F070580
-			public const int Snackbar_snackbarButtonStyle = 2131166592;
+			// aapt resource value: 0x7F090580
+			public const int Snackbar_snackbarButtonStyle = 2131297664;
 			
 			// aapt resource value: 0x1
 			public const int Snackbar_snackbarStyle = 1;
@@ -13740,8 +13774,8 @@ namespace TravelRecordApp.Droid
 					16843131,
 					2130968897};
 			
-			// aapt resource value: 0x7F070587
-			public const int Spinner_android_dropDownWidth = 2131166599;
+			// aapt resource value: 0x7F090587
+			public const int Spinner_android_dropDownWidth = 2131297671;
 			
 			// aapt resource value: 0x1
 			public const int Spinner_android_entries = 1;
@@ -13766,11 +13800,11 @@ namespace TravelRecordApp.Droid
 			public static int[] StateListDrawableItem = new int[] {
 					16843161};
 			
-			// aapt resource value: 0x7F070752
-			public const int StateListDrawableItem_android_drawable = 2131167058;
+			// aapt resource value: 0x7F090752
+			public const int StateListDrawableItem_android_drawable = 2131298130;
 			
-			// aapt resource value: 0x7F070745
-			public const int StateListDrawable_android_constantSize = 2131167045;
+			// aapt resource value: 0x7F090745
+			public const int StateListDrawable_android_constantSize = 2131298117;
 			
 			// aapt resource value: 0x1
 			public const int StateListDrawable_android_dither = 1;
@@ -13803,8 +13837,8 @@ namespace TravelRecordApp.Droid
 					2130969038,
 					2130969039};
 			
-			// aapt resource value: 0x7F070593
-			public const int SwitchCompat_android_textOff = 2131166611;
+			// aapt resource value: 0x7F090593
+			public const int SwitchCompat_android_textOff = 2131297683;
 			
 			// aapt resource value: 0x1
 			public const int SwitchCompat_android_textOn = 1;
@@ -13850,8 +13884,8 @@ namespace TravelRecordApp.Droid
 					16842994,
 					16843087};
 			
-			// aapt resource value: 0x7F070608
-			public const int TabItem_android_icon = 2131166728;
+			// aapt resource value: 0x7F090608
+			public const int TabItem_android_icon = 2131297800;
 			
 			// aapt resource value: 0x1
 			public const int TabItem_android_layout = 1;
@@ -13886,8 +13920,8 @@ namespace TravelRecordApp.Droid
 					2130968981,
 					2130968982};
 			
-			// aapt resource value: 0x7F070612
-			public const int TabLayout_tabBackground = 2131166738;
+			// aapt resource value: 0x7F090612
+			public const int TabLayout_tabBackground = 2131297810;
 			
 			// aapt resource value: 0x1
 			public const int TabLayout_tabContentStart = 1;
@@ -13976,8 +14010,8 @@ namespace TravelRecordApp.Droid
 					2130968786,
 					2130968983};
 			
-			// aapt resource value: 0x7F070638
-			public const int TextAppearance_android_fontFamily = 2131166776;
+			// aapt resource value: 0x7F090638
+			public const int TextAppearance_android_fontFamily = 2131297848;
 			
 			// aapt resource value: 0x1
 			public const int TextAppearance_android_shadowColor = 1;
@@ -14045,8 +14079,8 @@ namespace TravelRecordApp.Droid
 					2130968894,
 					2130968895};
 			
-			// aapt resource value: 0x7F070652
-			public const int TextInputLayout_android_hint = 2131166802;
+			// aapt resource value: 0x7F090652
+			public const int TextInputLayout_android_hint = 2131297874;
 			
 			// aapt resource value: 0x1
 			public const int TextInputLayout_android_textColorHint = 1;
@@ -14134,8 +14168,8 @@ namespace TravelRecordApp.Droid
 					2130968759,
 					2130968760};
 			
-			// aapt resource value: 0x7F070681
-			public const int ThemeEnforcement_android_textAppearance = 2131166849;
+			// aapt resource value: 0x7F090681
+			public const int ThemeEnforcement_android_textAppearance = 2131297921;
 			
 			// aapt resource value: 0x1
 			public const int ThemeEnforcement_enforceMaterialTheme = 1;
@@ -14174,8 +14208,8 @@ namespace TravelRecordApp.Droid
 					2130969028,
 					2130969029};
 			
-			// aapt resource value: 0x7F070685
-			public const int Toolbar_android_gravity = 2131166853;
+			// aapt resource value: 0x7F090685
+			public const int Toolbar_android_gravity = 2131297925;
 			
 			// aapt resource value: 0x1
 			public const int Toolbar_android_minHeight = 1;
@@ -14273,8 +14307,8 @@ namespace TravelRecordApp.Droid
 					2130968629,
 					2130968630};
 			
-			// aapt resource value: 0x7F070721
-			public const int ViewBackgroundHelper_android_background = 2131167009;
+			// aapt resource value: 0x7F090721
+			public const int ViewBackgroundHelper_android_background = 2131298081;
 			
 			// aapt resource value: 0x1
 			public const int ViewBackgroundHelper_backgroundTint = 1;
@@ -14287,8 +14321,8 @@ namespace TravelRecordApp.Droid
 					16842995,
 					16842994};
 			
-			// aapt resource value: 0x7F070725
-			public const int ViewStubCompat_android_id = 2131167013;
+			// aapt resource value: 0x7F090725
+			public const int ViewStubCompat_android_id = 2131298085;
 			
 			// aapt resource value: 0x1
 			public const int ViewStubCompat_android_inflatedId = 1;
@@ -14296,8 +14330,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x2
 			public const int ViewStubCompat_android_layout = 2;
 			
-			// aapt resource value: 0x7F070715
-			public const int View_android_focusable = 2131166997;
+			// aapt resource value: 0x7F090715
+			public const int View_android_focusable = 2131298069;
 			
 			// aapt resource value: 0x1
 			public const int View_android_theme = 1;
@@ -14317,8 +14351,8 @@ namespace TravelRecordApp.Droid
 					1,
 					1};
 			
-			// aapt resource value: 0x7F070885
-			public const int WalletFragmentOptions_appTheme = 2131167365;
+			// aapt resource value: 0x7F090885
+			public const int WalletFragmentOptions_appTheme = 2131298437;
 			
 			// aapt resource value: 0x1
 			public const int WalletFragmentOptions_environment = 1;
@@ -14345,8 +14379,8 @@ namespace TravelRecordApp.Droid
 			// aapt resource value: 0x3
 			public const int WalletFragmentStyle_buyButtonAppearance = 3;
 			
-			// aapt resource value: 0x7F070891
-			public const int WalletFragmentStyle_buyButtonHeight = 2131167377;
+			// aapt resource value: 0x7F090891
+			public const int WalletFragmentStyle_buyButtonHeight = 2131298449;
 			
 			// aapt resource value: 0x2
 			public const int WalletFragmentStyle_buyButtonText = 2;
@@ -14388,8 +14422,8 @@ namespace TravelRecordApp.Droid
 		public partial class Xml
 		{
 			
-			// aapt resource value: 0x7F080002
-			public const int xamarin_essentials_fileprovider_file_paths = 2131230722;
+			// aapt resource value: 0x7F100002
+			public const int xamarin_essentials_fileprovider_file_paths = 2131755010;
 			
 			static Xml()
 			{

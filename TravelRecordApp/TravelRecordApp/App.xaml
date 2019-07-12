@@ -15,11 +15,11 @@
             </Color>
             <Color x:Key="colorWhite">#FFFFFF</Color>
 
-            <Style TargetType="Button">
+            <Style x:Key="loginButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource colorBlue}"/>
                 <Setter Property="TextColor" Value="{StaticResource colorWhite}"/>
             </Style>
-            
+
         </ResourceDictionary>
         
     </Application.Resources>

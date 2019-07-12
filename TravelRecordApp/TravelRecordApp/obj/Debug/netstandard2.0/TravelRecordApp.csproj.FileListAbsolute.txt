@@ -38,3 +38,4 @@ D:\Data\projects\xamarin\xamarin-course\TravelRecordApp\TravelRecordApp\obj\Debu
 D:\Data\projects\xamarin\xamarin-course\TravelRecordApp\TravelRecordApp\obj\Debug\netstandard2.0\ref\TravelRecordApp.dll
 D:\Data\projects\xamarin\xamarin-course\TravelRecordApp\TravelRecordApp\obj\Debug\netstandard2.0\TravelRecordApp.pdb
 D:\Data\projects\xamarin\xamarin-course\TravelRecordApp\TravelRecordApp\obj\Debug\netstandard2.0\TravelRecordApp.csprojAssemblyReference.cache
+D:\Data\projects\xamarin\xamarin-course\TravelRecordApp\TravelRecordApp\obj\Debug\netstandard2.0\RegisterPage.xaml.g.cs

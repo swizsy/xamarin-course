@@ -21,8 +21,12 @@
                IsPassword="true"/>
         <Button x:Name="loginButton"
                 Text="Log In"
+                Style="{StaticResource loginButton}"
                 Margin="0, 50, 0, 0"
                 Clicked="LoginButton_Clicked"/>
+        <Button x:Name="registerButton"
+                Text="Register"
+                Clicked="RegisterButton_Clicked"/>
     </StackLayout>
 
 </ContentPage>

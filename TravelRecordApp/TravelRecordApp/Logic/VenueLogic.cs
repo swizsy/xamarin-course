@@ -11,7 +11,7 @@ namespace TravelRecordApp.Logic
 {
     public class VenueLogic
     {
-        public static async Task<List<Venue>> GetVenues(double latitude, double longitude)
+        public static async Task<List<Venue>> GetVenuesAsync(double latitude, double longitude)
         {
             List<Venue> venues = new List<Venue>();
 

@@ -1,5 +1,4 @@
 ﻿using Plugin.Geolocator;
-using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,11 +26,16 @@ namespace TravelRecordApp
             var locator = CrossGeolocator.Current;
             var position = await locator.GetPositionAsync();
 
-            var venues = await VenueLogic.GetVenues(position.Latitude, position.Longitude);
+            var venues = await VenueLogic.GetVenuesAsync(position.Latitude, position.Longitude);
             venuesListView.ItemsSource = venues.OrderBy(x => x.location.distance);
         }
 
         private void SaveTbi_Clicked(object sender, EventArgs e)
+        {
+            SavePost();
+        }
+
+        private async void SavePost()
         {
             try
             {
@@ -40,6 +44,7 @@ namespace TravelRecordApp
 
                 Post post = new Post()
                 {
+                    UserId = App.user.Id,
                     Experience = experienceEntry.Text,
                     VenueName = selectedVenue.name,
                     CategoryId = firstCategory.id,
@@ -50,20 +55,21 @@ namespace TravelRecordApp
                     Distance = selectedVenue.location.distance
                 };
 
-                int rows;
-                using (SQLiteConnection conn = new SQLiteConnection(App.DatabasePath))
-                {
-                    conn.CreateTable<Post>();
-                    rows = conn.Insert(post);
-                }
+                await App.MobileService.GetTable<Post>().InsertAsync(post);
+
+                await Navigation.PushAsync(new HomePage());
+
+                #region SQLite Local Database Code
+                //using (SQLiteConnection conn = new SQLiteConnection(App.DatabasePath))
+                //{
+                //    conn.CreateTable<Post>();
+                //    rows = conn.Insert(post);
+                //} 
+                #endregion
             }
-            catch(NullReferenceException nullRefEx)
+            catch (Exception)
             {
-                DisplayAlert("Error", nullRefEx.Message, "OK");
-            }
-            catch (Exception ex)
-            {
-                DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlert("Error", "Failed to save experience!", "OK");
             }
         }
     }
