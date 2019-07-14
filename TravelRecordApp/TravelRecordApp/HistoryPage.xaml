@@ -7,10 +7,12 @@
              x:Class="TravelRecordApp.HistoryPage">
 
     <ListView x:Name="postsListView"
-            SelectedItem="{Binding SelectedPost, Mode=TwoWay}">
+              SelectedItem="{Binding SelectedPost, Mode=TwoWay}"
+              ItemsSource="{Binding Posts}">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Experience}"/>
+                <TextCell Text="{Binding Experience}"
+                          TextColor="Black"/>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

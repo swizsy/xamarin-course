@@ -19,12 +19,12 @@ namespace TravelRecordApp
 
             viewModel = new HistoryViewModel();
             BindingContext = viewModel;
-            viewModel.PostsAcquiredEvent += OnPostsAcquired;
         }
 
-        private void OnPostsAcquired(object sender, PostsAcquiredEventArgs e)
+        protected override void OnAppearing()
         {
-            postsListView.ItemsSource = e.Posts;
+            base.OnAppearing();
+            viewModel.UpdateViewData();
         }
     }
 }

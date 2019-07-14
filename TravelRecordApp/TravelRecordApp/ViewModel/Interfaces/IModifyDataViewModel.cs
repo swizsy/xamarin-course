@@ -6,6 +6,7 @@ namespace TravelRecordApp.ViewModel.Interfaces
 {
     public enum Modification
     {
+        INSERT,
         UPDATE,
         DELETE
     }

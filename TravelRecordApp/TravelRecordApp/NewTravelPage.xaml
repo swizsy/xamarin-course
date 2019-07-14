@@ -10,17 +10,19 @@
         <ToolbarItem x:Name="saveTbi"
                      Text="Save"
                      IconImageSource="save.png"
-                     Clicked="SaveTbi_Clicked"/>
+                     Command="{Binding ModCommand}"
+                     CommandParameter="{Binding Insert}"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout x:Name="containerStackLayout">
         <Entry x:Name="experienceEntry"
                Placeholder="Write your experience!"
-               Text="{Binding Experience, Mode=TwoWay}"/>
+               Text="{Binding Post.Experience, Mode=TwoWay}"/>
 
         <ListView x:Name="venuesListView"
                   HorizontalOptions="FillAndExpand"
-                  Margin="20,0">
+                  Margin="20,0"
+                  SelectedItem="{Binding SelectedVenue}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

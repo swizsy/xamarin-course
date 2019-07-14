@@ -6,19 +6,8 @@ using TravelRecordApp.Model;
 
 namespace TravelRecordApp.ViewModel
 {
-    public class HistoryViewModel
+    public class HistoryViewModel : INotifyPropertyChanged
     {
-        private List<Post> posts;
-        public List<Post> Posts
-        {
-            get { return posts; }
-            set
-            {
-                posts = value;
-                RaisePostsAcquiredEvent();
-            }
-        }
-
         private Post selectedPost;
         public Post SelectedPost
         {
@@ -30,23 +19,20 @@ namespace TravelRecordApp.ViewModel
             }
         }
 
-        public event EventHandler<PostsAcquiredEventArgs> PostsAcquiredEvent;
-
-        public class PostsAcquiredEventArgs : EventArgs
+        private List<Post> posts;
+        public List<Post> Posts
         {
-            public List<Post> Posts;
-            public PostsAcquiredEventArgs(List<Post> posts)
+            get { return posts; }
+            set
             {
-                Posts = posts;
+                posts = value;
+                RaisePropertyChangedEvent("Posts");
             }
         }
 
-        public HistoryViewModel()
-        {
-            GetPosts();
-        }
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        private async void GetPosts()
+        public async void UpdateViewData()
         {
             Posts = await Post.GetUserPosts();
         }
@@ -56,9 +42,9 @@ namespace TravelRecordApp.ViewModel
             App.Current.MainPage.Navigation.PushAsync(new PostDetailsPage(SelectedPost));
         }
 
-        private void RaisePostsAcquiredEvent()
+        private void RaisePropertyChangedEvent(string propertyName)
         {
-            PostsAcquiredEvent?.Invoke(this, new PostsAcquiredEventArgs(Posts));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

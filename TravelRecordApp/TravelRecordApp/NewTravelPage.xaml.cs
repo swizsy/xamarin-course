@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TravelRecordApp.Model;
+using TravelRecordApp.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,13 +14,15 @@ namespace TravelRecordApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewTravelPage : ContentPage
     {
-        private Post post;
+        private NewTravelViewModel viewModel;
         public NewTravelPage()
         {
+            viewModel = new NewTravelViewModel();
+
             InitializeComponent();
 
-            post = new Post();
-            containerStackLayout.BindingContext = post;
+            containerStackLayout.BindingContext = viewModel;
+            saveTbi.BindingContext = viewModel;
         }
 
         protected async override void OnAppearing()
@@ -31,37 +34,6 @@ namespace TravelRecordApp
 
             var venues = await Venue.GetVenuesAsync(position.Latitude, position.Longitude);
             venuesListView.ItemsSource = venues.OrderBy(x => x.location.distance);
-        }
-
-        private void SaveTbi_Clicked(object sender, EventArgs e)
-        {
-            SavePost();
-        }
-
-        private void SavePost()
-        {
-            try
-            {
-                Venue selectedVenue = venuesListView.SelectedItem as Venue;
-                Category firstCategory = selectedVenue.categories.FirstOrDefault();
-
-                post.UserId = App.user.Id;
-                post.VenueName = selectedVenue.name;
-                post.CategoryId = firstCategory.id;
-                post.CategoryName = firstCategory.name;
-                post.Address = selectedVenue.location.address;
-                post.Latitude = selectedVenue.location.lat;
-                post.Longitude = selectedVenue.location.lng;
-                post.Distance = selectedVenue.location.distance;
-
-                Post.Insert(post);
-
-                Navigation.PushAsync(new HomePage());
-            }
-            catch (Exception)
-            {
-                DisplayAlert("Error", "Failed to save experience!", "OK");
-            }
         }
     }
 }

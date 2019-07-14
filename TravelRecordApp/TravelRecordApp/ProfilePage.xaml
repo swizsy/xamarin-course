@@ -5,16 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TravelRecordApp.ProfilePage">
-    <StackLayout Margin="20, 40, 20, 0">
+    <StackLayout Margin="20, 40, 20, 0"
+                 x:Name="containerStackLayout">
         <Label x:Name="postCountLabel"
-               Text="--"
+               Text="{Binding PostCount}"
                HorizontalOptions="Center"
                TextColor="DodgerBlue"
                FontAttributes="Bold"/>
         <Label Text="posts"
                 HorizontalOptions="Center"
                 TextColor="LightGray" />
-        <ListView x:Name="categoriesListView">
+        <ListView x:Name="categoriesListView"
+                  ItemsSource="{Binding PostsPerCategory}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Path=Key}"
