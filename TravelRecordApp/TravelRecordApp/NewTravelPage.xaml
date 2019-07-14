@@ -13,9 +13,10 @@
                      Clicked="SaveTbi_Clicked"/>
     </ContentPage.ToolbarItems>
 
-    <StackLayout>
+    <StackLayout x:Name="containerStackLayout">
         <Entry x:Name="experienceEntry"
-               Placeholder="Write your experience!"/>
+               Placeholder="Write your experience!"
+               Text="{Binding Experience, Mode=TwoWay}"/>
 
         <ListView x:Name="venuesListView"
                   HorizontalOptions="FillAndExpand"

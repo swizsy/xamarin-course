@@ -1,46 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TravelRecordApp.Model;
+using TravelRecordApp.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static TravelRecordApp.ViewModel.HistoryViewModel;
 
 namespace TravelRecordApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HistoryPage : ContentPage
     {
+        private HistoryViewModel viewModel;
+
         public HistoryPage()
         {
             InitializeComponent();
+
+            viewModel = new HistoryViewModel();
+            BindingContext = viewModel;
+            viewModel.PostsAcquiredEvent += OnPostsAcquired;
         }
 
-        protected override void OnAppearing()
+        private void OnPostsAcquired(object sender, PostsAcquiredEventArgs e)
         {
-            base.OnAppearing();
-
-            GetPostsDataAsync();
-        }
-
-        private void PostsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            Post selectedPost = postsListView.SelectedItem as Post;
-            Navigation.PushAsync(new PostDetailsPage(selectedPost));
-        }
-
-        private async void GetPostsDataAsync()
-        {
-            List<Post> posts;
-
-            posts = await App.MobileService.GetTable<Post>().Where(p => p.UserId == App.user.Id).ToListAsync();
-
-            #region SQLite Local Database Code
-            //using (SQLiteConnection connection = new SQLiteConnection(App.DatabasePath))
-            //{
-            //    connection.CreateTable<Post>();
-            //    posts = connection.Table<Post>().ToList();
-            //} 
-            #endregion
-
-            postsListView.ItemsSource = posts;
+            postsListView.ItemsSource = e.Posts;
         }
     }
 }

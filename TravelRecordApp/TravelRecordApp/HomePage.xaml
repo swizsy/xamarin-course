@@ -11,7 +11,7 @@
         <ToolbarItem x:Name="addTravelPageTbi"
                      Text="Add"
                      IconImageSource="plus.png"
-                     Clicked="AddTravelPageTbi_Clicked"/>
+                     Command="{Binding NavCommand}"/>
     </TabbedPage.ToolbarItems>
 
     <local:HistoryPage Title="History"

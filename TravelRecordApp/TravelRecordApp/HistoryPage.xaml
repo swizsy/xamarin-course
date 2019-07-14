@@ -5,12 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TravelRecordApp.HistoryPage">
+
     <ListView x:Name="postsListView"
-              ItemSelected="PostsListView_ItemSelected">
+            SelectedItem="{Binding SelectedPost, Mode=TwoWay}">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Experience}"/>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+
 </ContentPage>

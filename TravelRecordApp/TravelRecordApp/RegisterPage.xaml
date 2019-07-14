@@ -5,20 +5,25 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TravelRecordApp.RegisterPage">
-    <StackLayout VerticalOptions="Center"
+    <StackLayout x:Name="containerStackLayout"
+                 VerticalOptions="Center"
                  Margin="20">
         <Entry x:Name="emailEntry"
                Placeholder="Email address"
+               Text="{Binding Email, Mode=TwoWay}"
                Keyboard="Email"/>
         <Entry x:Name="passwordEntry"
                Placeholder="Password"
+               Text="{Binding Password, Mode=TwoWay}"
                IsPassword="true"/>
         <Entry x:Name="confirmPasswordEntry"
                Placeholder="Confirm password"
+               Text="{Binding ConfirmPassword, Mode=TwoWay}"
                IsPassword="true"/>
         <Button x:Name="registerButton"
                 Text="Register"
                 Margin="0, 50, 0, 0"
-                Clicked="RegisterButton_Clicked"/>
+                Command="{Binding RegisterCommand}"
+                CommandParameter="{Binding Data}"/>
     </StackLayout>
 </ContentPage>

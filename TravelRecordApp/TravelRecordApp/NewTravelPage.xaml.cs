@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TravelRecordApp.Logic;
 using TravelRecordApp.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,9 +13,13 @@ namespace TravelRecordApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewTravelPage : ContentPage
     {
+        private Post post;
         public NewTravelPage()
         {
             InitializeComponent();
+
+            post = new Post();
+            containerStackLayout.BindingContext = post;
         }
 
         protected async override void OnAppearing()
@@ -26,7 +29,7 @@ namespace TravelRecordApp
             var locator = CrossGeolocator.Current;
             var position = await locator.GetPositionAsync();
 
-            var venues = await VenueLogic.GetVenuesAsync(position.Latitude, position.Longitude);
+            var venues = await Venue.GetVenuesAsync(position.Latitude, position.Longitude);
             venuesListView.ItemsSource = venues.OrderBy(x => x.location.distance);
         }
 
@@ -35,41 +38,29 @@ namespace TravelRecordApp
             SavePost();
         }
 
-        private async void SavePost()
+        private void SavePost()
         {
             try
             {
                 Venue selectedVenue = venuesListView.SelectedItem as Venue;
                 Category firstCategory = selectedVenue.categories.FirstOrDefault();
 
-                Post post = new Post()
-                {
-                    UserId = App.user.Id,
-                    Experience = experienceEntry.Text,
-                    VenueName = selectedVenue.name,
-                    CategoryId = firstCategory.id,
-                    CategoryName = firstCategory.name,
-                    Address = selectedVenue.location.address,
-                    Latitude = selectedVenue.location.lat,
-                    Longitude = selectedVenue.location.lng,
-                    Distance = selectedVenue.location.distance
-                };
+                post.UserId = App.user.Id;
+                post.VenueName = selectedVenue.name;
+                post.CategoryId = firstCategory.id;
+                post.CategoryName = firstCategory.name;
+                post.Address = selectedVenue.location.address;
+                post.Latitude = selectedVenue.location.lat;
+                post.Longitude = selectedVenue.location.lng;
+                post.Distance = selectedVenue.location.distance;
 
-                await App.MobileService.GetTable<Post>().InsertAsync(post);
+                Post.Insert(post);
 
-                await Navigation.PushAsync(new HomePage());
-
-                #region SQLite Local Database Code
-                //using (SQLiteConnection conn = new SQLiteConnection(App.DatabasePath))
-                //{
-                //    conn.CreateTable<Post>();
-                //    rows = conn.Insert(post);
-                //} 
-                #endregion
+                Navigation.PushAsync(new HomePage());
             }
             catch (Exception)
             {
-                await DisplayAlert("Error", "Failed to save experience!", "OK");
+                DisplayAlert("Error", "Failed to save experience!", "OK");
             }
         }
     }

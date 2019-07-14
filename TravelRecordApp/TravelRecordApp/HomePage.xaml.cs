@@ -1,5 +1,5 @@
 ﻿using System;
-
+using TravelRecordApp.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -8,14 +8,14 @@ namespace TravelRecordApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : TabbedPage
     {
+        private HomeViewModel viewModel;
+
         public HomePage()
         {
             InitializeComponent();
-        }
 
-        private void AddTravelPageTbi_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new NewTravelPage());
+            viewModel = new HomeViewModel();
+            BindingContext = viewModel;
         }
     }
 }

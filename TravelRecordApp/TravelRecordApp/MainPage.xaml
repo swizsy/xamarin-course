@@ -14,19 +14,22 @@
                Margin="0, 0, 0, 50"
                HeightRequest="150"/>
         <Entry x:Name="emailEntry"
+               Text="{Binding Email, Mode=TwoWay}"
                Placeholder="Email address"
                Keyboard="Email"/>
         <Entry x:Name="passwordEntry"
+               Text="{Binding Password, Mode=TwoWay}"
                Placeholder="Password"
                IsPassword="true"/>
         <Button x:Name="loginButton"
                 Text="Log In"
                 Style="{StaticResource loginButton}"
                 Margin="0, 50, 0, 0"
-                Clicked="LoginButton_Clicked"/>
+                Command="{Binding LoginCommand}"
+                CommandParameter="{Binding User}"/>
         <Button x:Name="registerButton"
                 Text="Register"
-                Clicked="RegisterButton_Clicked"/>
+                Command="{Binding NavCommand}"/>
     </StackLayout>
 
 </ContentPage>

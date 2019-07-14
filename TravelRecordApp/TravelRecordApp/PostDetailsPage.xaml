@@ -6,13 +6,34 @@
              mc:Ignorable="d"
              x:Class="TravelRecordApp.PostDetailsPage">
         
-    <StackLayout>
-        <Entry x:Name="experienceEntry"/>
+    <StackLayout Margin="16,20,16,0">
+        <Entry x:Name="experienceEntry"
+               Text="{Binding Post.Experience, Mode=TwoWay}"/>
+        <Label x:Name="venueLabel"
+               Margin="0,30,0,0"
+               FontAttributes="Bold"
+               FontSize="22"
+               Text="{Binding Post.VenueName}"/>
+        <Label x:Name="categoryLabel"
+               TextColor="{StaticResource colorBlue}"
+               Text="{Binding Post.CategoryName}"/>
+        <Label x:Name="addressLabel"
+               FontSize="15"
+               Text="{Binding Post.Address}"/>
+        <Label x:Name="coordinatesLabel"
+               FontSize="15"
+               Text="{Binding Post.CoordinatesFormat}"/>
+        <Label x:Name="distanceLabel"
+               FontSize="15"
+               Text="{Binding Post.DistanceFormat}"/>
         <Button x:Name="UpdateButton"
                 Text="Update"
-                Clicked="UpdateButton_Clicked"/>
+                Command="{Binding ModCommand}"
+                CommandParameter="{Binding Update}"/>
         <Button x:Name="DeleteButton"
                 Text="Delete"
-                Clicked="DeleteButton_Clicked"/>
+                TextColor="Red"
+                Command="{Binding ModCommand}"
+                CommandParameter="{Binding Delete}"/>
     </StackLayout>
 </ContentPage>
