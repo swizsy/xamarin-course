@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using TravelRecordApp.Helpers;
 using TravelRecordApp.Model;
 using TravelRecordApp.ViewModel.Commands;
 using TravelRecordApp.ViewModel.Interfaces;
@@ -17,7 +18,7 @@ namespace TravelRecordApp.ViewModel
             set
             {
                 user = value;
-                RaisePropertyChangedEvent("User");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(User), PropertyChanged);
             }
         }
 
@@ -35,7 +36,7 @@ namespace TravelRecordApp.ViewModel
                     Password = this.Password
                 };
 
-                RaisePropertyChangedEvent("Email");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Email), PropertyChanged);
             }
         }
 
@@ -53,7 +54,7 @@ namespace TravelRecordApp.ViewModel
                     Password = this.Password
                 };
 
-                RaisePropertyChangedEvent("Password");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Password), PropertyChanged);
             }
         }
 
@@ -84,11 +85,6 @@ namespace TravelRecordApp.ViewModel
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Incorrect email or password!", "OK");
             }
-        }
-
-        private void RaisePropertyChangedEvent(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public async void Navigate()

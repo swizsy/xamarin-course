@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using TravelRecordApp.Helpers;
 using TravelRecordApp.Model;
 
 namespace TravelRecordApp.ViewModel
@@ -26,7 +27,7 @@ namespace TravelRecordApp.ViewModel
             set
             {
                 posts = value;
-                RaisePropertyChangedEvent("Posts");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Posts), PropertyChanged);
             }
         }
 
@@ -40,11 +41,6 @@ namespace TravelRecordApp.ViewModel
         private void OnPostSelected()
         {
             App.Current.MainPage.Navigation.PushAsync(new PostDetailsPage(SelectedPost));
-        }
-
-        private void RaisePropertyChangedEvent(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

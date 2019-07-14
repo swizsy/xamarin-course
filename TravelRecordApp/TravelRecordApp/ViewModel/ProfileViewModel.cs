@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using TravelRecordApp.Helpers;
 using TravelRecordApp.Model;
 
 namespace TravelRecordApp.ViewModel
@@ -14,7 +15,7 @@ namespace TravelRecordApp.ViewModel
             set
             {
                 postCount = value;
-                RaisePropertyChangedEvent("PostCount");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(PostCount), PropertyChanged);
             }
         }
 
@@ -25,7 +26,7 @@ namespace TravelRecordApp.ViewModel
             set
             {
                 postsPerCategory = value;
-                RaisePropertyChangedEvent("PostsPerCategory");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(PostsPerCategory), PropertyChanged);
             }
         }
 
@@ -36,11 +37,6 @@ namespace TravelRecordApp.ViewModel
             var posts = await Post.GetUserPosts();
             PostCount = posts.Count.ToString();
             PostsPerCategory = Post.GetPostsPerCategory(posts);
-        }
-
-        private void RaisePropertyChangedEvent(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

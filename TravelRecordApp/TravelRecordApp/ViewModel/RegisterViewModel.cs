@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using TravelRecordApp.Helpers;
 using TravelRecordApp.Model;
 using TravelRecordApp.ViewModel.Commands;
 
@@ -23,7 +24,7 @@ namespace TravelRecordApp.ViewModel
             set
             {
                 data = value;
-                RaisePropertyChangedEvent("Data");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Data), PropertyChanged);
             }
         }
 
@@ -42,7 +43,7 @@ namespace TravelRecordApp.ViewModel
                     ConfirmPassword = this.ConfirmPassword
                 };
 
-                RaisePropertyChangedEvent("Email");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Email), PropertyChanged);
             }
         }
 
@@ -61,7 +62,7 @@ namespace TravelRecordApp.ViewModel
                     ConfirmPassword = this.ConfirmPassword
                 };
 
-                RaisePropertyChangedEvent("Password");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Password), PropertyChanged);
             }
         }
 
@@ -80,7 +81,7 @@ namespace TravelRecordApp.ViewModel
                     ConfirmPassword = this.ConfirmPassword
                 };
 
-                RaisePropertyChangedEvent("ConfirmPassword");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(ConfirmPassword), PropertyChanged);
             }
         }
 
@@ -126,11 +127,6 @@ namespace TravelRecordApp.ViewModel
                 await App.Current.MainPage.Navigation.PushAsync(new HomePage());
                 await App.Current.MainPage.DisplayAlert("WELCOME", "Welcome new user! Nice to have you here!", "Thanks!");
             }
-        }
-
-        private void RaisePropertyChangedEvent(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

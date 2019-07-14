@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TravelRecordApp.Helpers;
 
 namespace TravelRecordApp.Model
 {
@@ -15,7 +16,7 @@ namespace TravelRecordApp.Model
             set
             {
                 id = value;
-                RaisePropertyChangedEvent("Id");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Id), PropertyChanged);
             }
         }
 
@@ -26,7 +27,7 @@ namespace TravelRecordApp.Model
             set
             {
                 email = value;
-                RaisePropertyChangedEvent("Email");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Email), PropertyChanged);
             }
         }
 
@@ -37,7 +38,7 @@ namespace TravelRecordApp.Model
             set
             {
                 password = value;
-                RaisePropertyChangedEvent("Password");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Password), PropertyChanged);
             }
         }
 
@@ -75,11 +76,6 @@ namespace TravelRecordApp.Model
             }
 
             return false;
-        }
-
-        private void RaisePropertyChangedEvent(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

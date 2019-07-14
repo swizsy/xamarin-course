@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TravelRecordApp.Helpers;
 
 namespace TravelRecordApp.Model
 {
@@ -17,7 +18,7 @@ namespace TravelRecordApp.Model
             set
             {
                 id = value;
-                RaisePropertyChangedEvent("Id");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Id), PropertyChanged);
             }
         }
 
@@ -28,7 +29,8 @@ namespace TravelRecordApp.Model
             set
             {
                 userId = value;
-                RaisePropertyChangedEvent("UserId");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(UserId), PropertyChanged);
+
             }
         }
 
@@ -39,7 +41,7 @@ namespace TravelRecordApp.Model
             set
             {
                 experience = value;
-                RaisePropertyChangedEvent("Experience");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Experience), PropertyChanged);
             }
         }
 
@@ -51,7 +53,7 @@ namespace TravelRecordApp.Model
             set
             {
                 venueName = value;
-                RaisePropertyChangedEvent("VenueName");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(VenueName), PropertyChanged);
             }
         }
 
@@ -62,7 +64,7 @@ namespace TravelRecordApp.Model
             set
             {
                 categoryId = value;
-                RaisePropertyChangedEvent("CategoryId");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(CategoryId), PropertyChanged);
             }
         }
 
@@ -73,7 +75,7 @@ namespace TravelRecordApp.Model
             set
             {
                 categoryName = value;
-                RaisePropertyChangedEvent("CategoryName");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(CategoryName), PropertyChanged);
             }
         }
 
@@ -84,7 +86,7 @@ namespace TravelRecordApp.Model
             set
             {
                 address = value;
-                RaisePropertyChangedEvent("Address");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Address), PropertyChanged);
             }
         }
 
@@ -95,7 +97,7 @@ namespace TravelRecordApp.Model
             set
             {
                 latitude = value;
-                RaisePropertyChangedEvent("Latitude");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Latitude), PropertyChanged);
             }
         }
 
@@ -106,7 +108,7 @@ namespace TravelRecordApp.Model
             set
             {
                 longitude = value;
-                RaisePropertyChangedEvent("Longitude");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Longitude), PropertyChanged);
             }
         }
 
@@ -117,7 +119,7 @@ namespace TravelRecordApp.Model
             set
             {
                 distance = value;
-                RaisePropertyChangedEvent("Distance");
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(Distance), PropertyChanged);
             }
         }
         #endregion
@@ -169,11 +171,6 @@ namespace TravelRecordApp.Model
             }
 
             return postsPerCategory;
-        }
-
-        private void RaisePropertyChangedEvent(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
