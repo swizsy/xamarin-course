@@ -4,7 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TravelRecordApp.HistoryPage">
+             x:Class="TravelRecordApp.HistoryPage"
+             xmlns:converters="clr-namespace:TravelRecordApp.ViewModel.Converters">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DateTimeToStringConverter x:Key="converter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <ListView x:Name="postsListView"
               SelectedItem="{Binding SelectedPost, Mode=TwoWay}"
@@ -12,7 +19,15 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Experience}"
-                          TextColor="Black"/>
+                          Detail="{Binding CREATEDAT, Converter={StaticResource converter}}"
+                          TextColor="Black">
+                    <TextCell.ContextActions>
+                        <MenuItem Text="Delete"
+                                  Command="{Binding ModCommand, Mode=TwoWay}"
+                                  CommandParameter="{Binding Delete}"
+                                  IsDestructive="True"/>
+                    </TextCell.ContextActions>
+                </TextCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

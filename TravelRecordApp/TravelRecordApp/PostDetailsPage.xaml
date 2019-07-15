@@ -6,7 +6,8 @@
              mc:Ignorable="d"
              x:Class="TravelRecordApp.PostDetailsPage">
         
-    <StackLayout Margin="16,20,16,0">
+    <StackLayout Margin="16,20,16,0"
+                 CompressedLayout.IsHeadless="True">
         <Entry x:Name="experienceEntry"
                Text="{Binding Post.Experience, Mode=TwoWay}"/>
         <Label x:Name="venueLabel"

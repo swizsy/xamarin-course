@@ -134,6 +134,17 @@ namespace TravelRecordApp.Model
             get { return $"{Distance} m"; }
         }
 
+        private DateTimeOffset createDat;
+        public DateTimeOffset CREATEDAT
+        {
+            get { return createDat; }
+            set
+            {
+                createDat = value;
+                PropertyChangedHelper.RaisePropertyChangedEvent(nameof(CREATEDAT), PropertyChanged);
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         #region Database Operations

@@ -14,7 +14,8 @@
                      CommandParameter="{Binding Insert}"/>
     </ContentPage.ToolbarItems>
 
-    <StackLayout x:Name="containerStackLayout">
+    <StackLayout x:Name="containerStackLayout"
+                 CompressedLayout.IsHeadless="True">
         <Entry x:Name="experienceEntry"
                Placeholder="Write your experience!"
                Text="{Binding Post.Experience, Mode=TwoWay}"/>
@@ -26,7 +27,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid>
+                        <Grid
+                            CompressedLayout.IsHeadless="True">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>

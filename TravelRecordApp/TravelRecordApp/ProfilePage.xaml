@@ -6,7 +6,8 @@
              mc:Ignorable="d"
              x:Class="TravelRecordApp.ProfilePage">
     <StackLayout Margin="20, 40, 20, 0"
-                 x:Name="containerStackLayout">
+                 x:Name="containerStackLayout"
+                 CompressedLayout.IsHeadless="True">
         <Label x:Name="postCountLabel"
                Text="{Binding PostCount}"
                HorizontalOptions="Center"
